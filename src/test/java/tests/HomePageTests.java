@@ -14,6 +14,7 @@ import pages.ProductsPage;
 @Listeners({io.qameta.allure.testng.AllureTestNg.class})
 public class HomePageTests extends BaseTest {
 
+//    @Test(enabled = false)
     @Test(description = "Verify successful login with valid credentials")
     @Story("User Login")
     @Severity(SeverityLevel.BLOCKER)

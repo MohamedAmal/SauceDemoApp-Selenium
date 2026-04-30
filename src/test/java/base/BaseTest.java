@@ -7,13 +7,16 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+import org.testng.annotations.Listeners;
 
+
+@Listeners({base.CustomAllureListener.class})
 public class BaseTest {
 //    @Optional("chrome") String browser,
 //    @Optional("true") String headless,
     @BeforeMethod
     @Parameters({"browser", "headless"})
-    public void setUp( String browser,
+    public void setUp(  @Optional("chrome") String browser,
                        String headless,
                       ITestResult result) {
         boolean isHeadless = Boolean.parseBoolean(headless);
